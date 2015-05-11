@@ -24,6 +24,12 @@ gem 'jquery-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Auth
+gem "devise"
+
+# Api gems
+gem 'active_model_serializers'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api
   gem 'sdoc', require: false
