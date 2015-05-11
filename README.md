@@ -1,3 +1,3 @@
 # Market Place API
 
-Reading through [APIs On Rails](http://apionrails.icalialabs.com/book)
+Learning some API best practices from [APIs On Rails](http://apionrails.icalialabs.com/book) :smile:
