@@ -28,7 +28,7 @@ gem 'jquery-rails'
 gem "devise"
 
 # Api gems
-gem 'active_model_serializers'
+gem 'active_model_serializers', :git => 'git@github.com:rails-api/active_model_serializers.git', :branch => '0-8-stable'
 
 gem 'sabisu_rails', :github => "IcaliaLabs/sabisu-rails"
 gem 'compass-rails'
