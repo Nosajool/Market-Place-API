@@ -25,7 +25,7 @@ describe Api::V1::ProductsController do
       4.times { FactoryGirl.create :product }
     end
 
-    context "when is not receiving any products_ids paramater" do
+    context "when is not receiving any product_ids parameter" do
       before(:each) do
         get :index
       end
@@ -42,16 +42,17 @@ describe Api::V1::ProductsController do
         end
       end
 
+      it_behaves_like "paginated list"
+
       it { should respond_with 200 }
     end
 
-    context "when product_ids paramter is sent" do
+    context "when product_ids parameter is sent" do
       before(:each) do
         @user = FactoryGirl.create :user
-        3.times { FactoryGirl.create :product, :user => @user }
-        get :index, :product_ids => @user.product_ids
+        3.times { FactoryGirl.create :product, user: @user }
+        get :index, product_ids: @user.product_ids
       end
-
 
       it "returns just the products that belong to the user" do
         products_response = json_response[:products]
@@ -60,7 +61,6 @@ describe Api::V1::ProductsController do
         end
       end
     end
-
   end
 
  describe "POST #create" do
